@@ -11,6 +11,16 @@ $input-border-radius: 0;
 $input-border-radius-lg: 0;
 $input-border-radius-sm: 0;
 $h3-font-size: 20px;
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 4,
+  5: $spacer * 10,
+  6:  $spacer * 25,
+);
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
@@ -23,6 +33,28 @@ h1 {
     font-weight: 700;
     text-transform: uppercase
 }
+
+////BUTTONS&LINKS////
+
+.link {
+    position: relative;
+    border-bottom: 1px solid rgba(0,0,0,0);
+    font-weight: 700;
+}
+a.link:hover {
+    border-bottom: 1px solid $danger;
+}
+a.link:hover:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: -5px;
+    z-index: -1;
+    border-bottom: 1px solid $danger;
+}
+
 .btn-primary {
     background: $danger;
     border-radius: 0;
@@ -30,11 +62,23 @@ h1 {
     color: $white;
     padding: 16px 24px
 }
-.btn-primary span {
-    padding-left: 10px
+.btn-primary:hover {
+    background:  $danger;
+    color: $white;
+    border-color:  $danger;
 }
+.btn-primary span img {
+    transform: translate(10px, 0);
+    transition:  all 0.55s ease-in-out;
+}
+.btn-primary:hover span img{
+    transform: translateX(20px);
+}
+
+////HERO////
+
 .hero {
-    margin-top: -62px
+    margin-top: -65px
 }
 .hero-link {
     font-size: 36px;
@@ -63,4 +107,45 @@ h1 {
 .lang,
 .hero .bg-primary {
     border-left: 1px solid $gray-900
+}
+.bg-star {
+    background: url(../img/star-bg.svg) no-repeat center
+}
+
+////CARD-----PORTFOLIO///
+.work-img {
+    max-height: 600px;
+    overflow: hidden;
+}
+.work-info .row{
+    border-top: 1px solid $gray-900
+}
+.work-info p{
+    margin-bottom: 0
+}
+.btn-eye {
+    display: block;
+    background: url(../img/eye.svg) no-repeat;
+    width: 111px;
+    height: 111px;
+}
+.btn-eye:hover {
+    background: url(../img/eye-hover.svg) no-repeat;
+    
+}
+.eye-btn .plus {
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
+      -webkit-transition: all 0.55s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    transition:  all 0.55s ease-in-out;
+}
+.eye-btn:hover .plus {
+    transform: rotate(45deg);
+    transform-origin: 50% 50%;
+      -webkit-transition: all 0.55s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    transition:  all 0.55s ease-in-out;
 }
