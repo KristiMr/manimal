@@ -1,5 +1,6 @@
 
 $primary: #CDE6EE;
+$secondary: #FABDBD;
 $white: #fcfcfc;
 $gray-900: #111;
 $danger: #E52828;
@@ -32,6 +33,11 @@ h1 {
     font-size: 54px;
     font-weight: 700;
     text-transform: uppercase
+}
+////FORMS////
+input.form-control, textarea {
+    border: 0;
+    border-bottom: 1px solid $gray-900
 }
 
 ////BUTTONS&LINKS////
@@ -111,6 +117,9 @@ a.link:hover:before {
 .bg-star {
     background: url(../img/star-bg.svg) no-repeat center
 }
+.bg-stars {
+    background: url(../img/bg-stars.svg) no-repeat center
+}
 
 ////CARD-----PORTFOLIO///
 .work-img {
@@ -123,29 +132,16 @@ a.link:hover:before {
 .work-info p{
     margin-bottom: 0
 }
-.btn-eye {
-    display: block;
-    background: url(../img/eye.svg) no-repeat;
-    width: 111px;
-    height: 111px;
-}
-.btn-eye:hover {
-    background: url(../img/eye-hover.svg) no-repeat;
-    
-}
-.eye-btn .plus {
+
+.btn-eye .plus {
     transform: rotate(0deg);
     transform-origin: 50% 50%;
-      -webkit-transition: all 0.55s ease-in-out;
+      -webkit-transition: all 0.25s ease-in-out;
     transition: all 0.25s ease-in-out;
     transition: all 0.25s ease-in-out;
     transition:  all 0.55s ease-in-out;
 }
-.eye-btn:hover .plus {
+.btn-eye:hover .plus {
     transform: rotate(45deg);
     transform-origin: 50% 50%;
-      -webkit-transition: all 0.55s ease-in-out;
-    transition: all 0.25s ease-in-out;
-    transition: all 0.25s ease-in-out;
-    transition:  all 0.55s ease-in-out;
 }
