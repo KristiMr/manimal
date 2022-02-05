@@ -1,8 +1,9 @@
 
-$primary: #D6342E;
+$primary: #CDE6EE;
 $white: #fcfcfc;
-$gray-900: #151515;
-$font-family-sans-serif: 'Montserrat', sans-serif;
+$gray-900: #111;
+$danger: #E52828;
+$font-family-sans-serif: 'Syne', sans-serif;
 $btn-border-radius: 0;
 $btn-border-radius-lg: 0;
 $btn-border-radius-sm: 0;
@@ -13,3 +14,53 @@ $h3-font-size: 20px;
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
+html,body {
+  height: 100%;
+}
+
+h1 {
+    font-size: 54px;
+    font-weight: 700;
+    text-transform: uppercase
+}
+.btn-primary {
+    background: $danger;
+    border-radius: 0;
+    border: 1px solid $gray-900;
+    color: $white;
+    padding: 16px 24px
+}
+.btn-primary span {
+    padding-left: 10px
+}
+.hero {
+    margin-top: -62px
+}
+.hero-link {
+    font-size: 36px;
+    display: block;
+    color: $gray-900;
+    text-decoration: none;
+}
+.hero-link:hover {
+    color: $danger;
+}
+.hero-link span {
+    opacity: 0;
+    padding-left: 0;
+    -webkit-transition: all 0.55s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    transition:  all 0.55s ease-in-out;
+}
+.hero-link:hover span {
+    opacity: 1;
+    padding-left: 20px;
+}
+.container-fluid {
+    border-bottom: 1px solid $gray-900
+}
+.lang,
+.hero .bg-primary {
+    border-left: 1px solid $gray-900
+}

@@ -9,21 +9,21 @@
     <!-- Bootstrap CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="style/app.css" rel="stylesheet">
     <title>Hello, world!</title>
 </head>
 
 <body>
-        <nav class="navbar navbar-expand-lg position-absolute w-100 navbar-light bg-light ps-4 pe-4">
-            <div class="container-fluid position-relative">
+    <nav class="navbar navbar-expand-lg sticky-top w-100 navbar-light container-fluid  align-items-center ">
+            <div class="position-relative mb-1 w-100">
                 <a class="navbar-brand mr-auto" href="#"><img src="img/logo.svg" /> </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
+                <div class="collapse navbar-collapse float-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav navbar-right ml-auto">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">About</a>
                         </li>
@@ -37,9 +37,9 @@
                             <a class="nav-link" href="#">Contact</a>
                         </li>
                     </ul>
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav ml-auto lang">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">eesti</a>
+                            <a class="nav-link" aria-current="page" href="#">eesti</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">suomi</a>
@@ -47,65 +47,103 @@
                     </ul>
                 </div>
             </div>
-        </nav>
-    <div class="container">
-        <div class="row align-items-end">
+    </nav>
+    <div class="container-fluid hero h-100">
+        <div class="row align-items-center h-100">
             <div class="col-4">
                 <h1>Manimal Do</h1>
+                <a class="hero-link" href="#">Web<span><img src="img/btn-icon.svg" /></span></a>
+                <a class="hero-link" href="#">Design<span><img src="img/btn-icon.svg" /></span></a>
+                <a class="hero-link" href="#">Seo<span><img src="img/btn-icon.svg" /></span></a>
+                <a class="hero-link" href="#">Social media<span><img src="img/btn-icon.svg" /></span></a>
             </div>
-            <div class="col-8 primary-bg">
-                <div class="row  align-items-end">
+            <div class="col-8 bg-primary pt-5 pb-5 h-100">
+                <div class="row  align-items-center h-100">
                     <div class="col-8">
-                        <img src="img/hero-img.svg" />
+                        <img src="img/hero-img.svg" class="img-fluid w-100"/>
                     </div>
                     <div class="col-4">
                       <p>We are a micro company in the middle of Estonia forests. Our goal is to create exciting design, websites and offer our
                     knowledge about SEO and social media.</p>
-                       
+                    <button type="button" class="btn btn-primary">Keep reading<span><img src="img/btn-icon.svg" /></span></button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container services">
-        <div class="row align-items-end">
+    <div class="container-fluid services">
+        <div class="row align-items-end pt-5 pb-5 ">
             <div class="col-4">
                 <h1>Our services</h1>
             </div>
-            <div class="col-8 primary-bg">
+            <div class="col-8">
                 <div class="row  align-items-end">
                     <div class="col">
-                        <p>We are a micro company in the middle of Estonia forests. Our goal is to create exciting design,
-                            websites and offer our
-                            knowledge about SEO and social media.</p>
+                    <h3> WEB DEVELOPMENT</h3>
+                        <p>We bring ideas to life in close collaboration with our clients. We incorporate user feedback in all of our projects and
+                        we understand what consumers need.</p>
                     </div>
                     <div class="col">
-                        <p>We are a micro company in the middle of Estonia forests. Our goal is to create exciting design,
-                            websites and offer our
-                            knowledge about SEO and social media.</p>
+                        <h3>DESIGN</h3>
+                        <p>We will invest all of our resources into making your website’s user interface outshine the competitors.</p>
                     </div>
                 </div>
                 <div class="row  align-items-end">
                     <div class="col">
-                        <p>We are a micro company in the middle of Estonia forests. Our goal is to create exciting design,
-                            websites and offer our
-                            knowledge about SEO and social media.</p>
+                        <h3>Social media</h3>
+                        <p>We wake your product or service to life in the Digital World.</p>
                     </div>
                     <div class="col">
-                        <p>We are a micro company in the middle of Estonia forests. Our goal is to create exciting design,
-                            websites and offer our
-                            knowledge about SEO and social media.</p>
+                        <h3>SEO</h3>
+                        <p>Eve the best websites are useless if people can’t find them</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container works">
+    <div class="container-fluid works">
         <div class="row align-items-end">
             <div class="col-4">
                 <h1>Our work</h1>
             </div>
-            <div class="col-8 primary-bg">
+            <div class="col-8">
+                <div class="row  align-items-end">
+                    <div class="col bg-primary">
+                        <p>We are a micro company in the middle of Estonia forests. Our goal is to create exciting design,
+                            websites and offer our
+                            knowledge about SEO and social media.</p>
+                    </div>
+                    <div class="col">
+                        <p>We are a micro company in the middle of Estonia forests. Our goal is to create exciting design,
+                            websites and offer our
+                            knowledge about SEO and social media.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-end">
+            <div class="col">
+                <p>We are a micro company in the middle of Estonia forests. Our goal is to create exciting design,
+                    websites and offer our
+                    knowledge about SEO and social media.</p>
+            </div>
+            <div class="col"><p>We are a micro company in the middle of Estonia forests. Our goal is to create exciting design,
+                websites and offer our
+                knowledge about SEO and social media.</p>
+            </div>
+            <div class="col">
+                <p>We are a micro company in the middle of Estonia forests. Our goal is to create exciting design,
+                            websites and offer our
+                            knowledge about SEO and social media.</p>
+             </div>
+        </div>
+    </div>
+    <div class="container-fluid clients">
+        <div class="row align-items-end">
+            <div class="col-4">
+                <h1>Our clients</h1>
+            </div>
+            <div class="col-8">
                 <div class="row  align-items-end">
                     <div class="col">
                         <p>We are a micro company in the middle of Estonia forests. Our goal is to create exciting design,
@@ -133,6 +171,21 @@
             </div>
         </div>
     </div>
+    <footer class="container-fluid">
+        <div class="row align-items-end">
+            <div class="col">
+                        <h1>Our clients</h1>
+            </div>
+            <div class="col">
+            </div>
+            <div class="col">
+            </div>
+        </div>
+        <div class="row align-items-end">
+            <div class="col">
+            </div>
+        </div>
+    </footer>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
