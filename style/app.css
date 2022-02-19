@@ -13022,6 +13022,19 @@ a.nav-link {
   background: url(../img/bg-stars.svg) no-repeat center;
 }
 
+.eyes-anim .lid {
+  opacity: 1;
+  -webkit-transition: all 0.55s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  transition: all 0.55s ease-in-out;
+}
+
+.eyes-anim:hover .lid {
+  opacity: 0;
+}
+
 .work-img {
   max-height: 600px;
   overflow: hidden;
@@ -13118,6 +13131,14 @@ a.nav-link {
 .modal a.btn-next {
   left: auto;
   right: 24px;
+}
+
+.services .col {
+  border-right: 1px solid #111;
+}
+
+.services .col.last {
+  border: 0;
 }
 
 footer li a {
