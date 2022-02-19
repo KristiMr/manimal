@@ -1,7 +1,7 @@
 
-$primary: #CDE6EE;
+$primary: #E9E9E9;
 $secondary: #FABDBD;
-$white: #fcfcfc;
+$white: #fff;
 $gray-900: #111;
 $danger: #E52828;
 $font-family-sans-serif: 'Syne', sans-serif;
@@ -34,13 +34,18 @@ h1 {
     font-weight: 700;
     text-transform: uppercase
 }
-////FORMS////
+/////////////////////////////////////////
+////             FORMS               ////
+/////////////////////////////////////////
+
 input.form-control, textarea {
     border: 0;
     border-bottom: 1px solid $gray-900
 }
 
-////BUTTONS&LINKS////
+/////////////////////////////////////////
+////            BUTTONS&LINKS        ////
+/////////////////////////////////////////
 
 .link {
     position: relative;
@@ -81,11 +86,10 @@ a.link:hover:before {
     transform: translateX(20px);
 }
 
-////HERO////
+/////////////////////////////////////////
+////         HERO                   ////
+/////////////////////////////////////////
 
-.hero {
-    margin-top: -65px
-}
 .hero-link {
     font-size: 36px;
     display: block;
@@ -121,7 +125,9 @@ a.link:hover:before {
     background: url(../img/bg-stars.svg) no-repeat center
 }
 
-////CARD-----PORTFOLIO///
+/////////////////////////////////////////
+/////      CARD-----PORTFOLIO   /////////
+////////////////////////////////////////
 .work-img {
     max-height: 600px;
     overflow: hidden;
@@ -132,7 +138,16 @@ a.link:hover:before {
 .work-info p{
     margin-bottom: 0
 }
-
+.modal-xl {
+    max-width: 1440px;
+}
+.modal-content {
+    border: 0;
+    border-radius: 0;
+}
+.modal .row {
+    --bs-gutter-x: 0rem;
+}
 .btn-eye .plus {
     transform: rotate(0deg);
     transform-origin: 50% 50%;
@@ -144,4 +159,21 @@ a.link:hover:before {
 .btn-eye:hover .plus {
     transform: rotate(45deg);
     transform-origin: 50% 50%;
+}
+.modal .btn-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 10;
+    border: 1px solid #111;
+    border-radius: 50%;
+    padding: 16px
+}
+.modal hr {
+    display: block;
+    margin: 36px 0
+}
+.modal a.btn-next,
+.modal a.btn-prev {
+    color: #111
 }
