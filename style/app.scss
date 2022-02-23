@@ -90,7 +90,7 @@ a.link.active:before {
 /////////////////////////////////////////
 ////       NAV   +  HERO            ////
 /////////////////////////////////////////
-a.nav-link {
+.navbar-light .navbar-nav .nav-link {
     font-size: 16px;
      color: $gray-900
 }
@@ -115,6 +115,26 @@ a.nav-link {
     opacity: 1;
     padding-left: 20px;
 }
+.hero-img {
+    padding: 72px 64px;
+    margin: 64px auto auto -64px;
+    background-color: $gray-900;
+    position: relative;
+}
+.hero-img img {
+    z-index: 10;
+    position: relative;
+}
+.hero-img:before {
+    content: '';
+    position: absolute;
+    bottom: -64px;
+    right: -64px;
+    width: 50%;
+    height: 50%;
+    z-index: 1;
+    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='25' height='25' patternTransform='scale(1) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0,0%,100%,0)'/><path d='M3.25 10h13.5M10 3.25v13.5' transform='translate(2.5,0)' stroke-linecap='square' stroke-width='1' stroke='hsla(0, 0%, 0%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(-20,0)' fill='url(%23a)'/></svg>")
+}
 .lang {
     border-left: 1px solid $gray-900
 }
@@ -134,6 +154,7 @@ a.nav-link {
 .eyes-anim:hover .lid {
     opacity: 0;
 }
+
 /////////////////////////////////////////
 /////      CARD-----PORTFOLIO   /////////
 ////////////////////////////////////////
@@ -141,7 +162,8 @@ a.nav-link {
     max-height: 600px;
     overflow: hidden;
 }
-.work-img img {
+.work-img img,
+.clients img {
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
   -webkit-transition: all 0.55s ease-in-out;
@@ -149,7 +171,8 @@ a.nav-link {
     transition: all 0.25s ease-in-out;
     transition:  all 0.55s ease-in-out;
 }
-.work-img img:hover {
+.work-img img:hover,
+.clients img:hover {
     -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
   filter: grayscale(0%);
 }
@@ -212,20 +235,49 @@ a.nav-link {
     left: auto;
     right: 24px
 }
+/////////////////////////////////////////
+////       INDEX CLIENTS           ////
+/////////////////////////////////////////
+.clients img {
+    max-width: 200px;
+}
 
 /////////////////////////////////////////
 ////            SERVICES PAGE        ////
 /////////////////////////////////////////
-.services .col {
+.services-all .col {
     border-right: 1px solid $gray-900
 }
-.services .col.last {
+.services-all .col.last {
     border: 0
 }
 /////////////////////////////////////////
 /////          FOOTER          /////////
 ////////////////////////////////////////
+footer ul {
+    padding: 0
+}
+footer li {
+    list-style: none;
+    position: relative;
+    padding-left: 24px;
+}
+footer li:before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 1px;
+    background-color: $gray-900;
+    left: 0;
+    bottom: 50%
+}
 footer li a {
     color: $gray-900;
-    text-decoration: none
+    text-decoration: none;
+}
+footer a.social:hover rect {
+    stroke: $gray-900
+}
+footer a.social:hover path {
+    fill: $gray-900
 }
