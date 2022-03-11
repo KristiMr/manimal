@@ -30,7 +30,8 @@ html,body {
 }
 body {
     background: url(../img/maybebaby.jpg) no-repeat fixed center;
-    color: $secondary
+    color: $secondary;
+    overflow-x: hidden;
 }
 h1 {
     font-size: 54px;
@@ -68,26 +69,27 @@ input.form-control:focus, textarea:focus {
 
 .link {
     position: relative;
-    border-bottom: 1px solid $secondary;
-    font-weight: 700;
+    font-weight: 400;
+    color: $secondary;
+    text-decoration: none;
+    padding-left: 24px;
 }
 a.link:hover,
-a.link.active,
-.navbar-light .navbar-nav .nav-link.active,
-.navbar-light .navbar-nav .nav-link:hover {
-    border-bottom: 1px solid $danger;
+a.link.active{
     color: $danger
 }
-a.link:hover:before,
-a.link.active:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    left: 0;
-    bottom: -5px;
-    z-index: -1;
-    border-bottom: 1px solid $danger;
+.navbar-light .navbar-nav .nav-link {
+    padding-left: 24px;
+    padding-right: 24px;
+    font-weight: 600
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    background: url(../img/plus-blue.svg) no-repeat 8px;
+    color: $danger
+}
+.navbar-light .navbar-nav .nav-link.active {
+    background: url(../img/plus-red.svg) no-repeat 8px;
+    color: $danger
 }
 
 .btn-primary {
@@ -160,7 +162,6 @@ a.link.active:before {
     padding-left: 20px;
 }
 .hero-img {
-    padding: 72px 64px;
     margin: 64px auto auto -64px;
     position: relative;
 }
@@ -204,6 +205,17 @@ a.link.active:before {
   0%   {transform: translate(0, 0);}
   25%  {transform: translate(-10px, 30px);}
   75%  {transform: translate(10px, 30px);}
+  100% {transform: translate(0, 0);}
+}
+.eyes-anim.fly {
+    animation-name: eyes-fly;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    transform-origin: center;
+}
+@keyframes eyes-fly {
+  0%   {transform: translate(0, 0);}
+  50%  {transform: translate(0, 80px);}
   100% {transform: translate(0, 0);}
 }
 /////////////////////////////////////////
@@ -300,10 +312,10 @@ a.link.active:before {
 .sub-bg {
     background: url(../img/blur-bg-sub.png) no-repeat 100%;
 }
-.services-all .col {
+.services-all .col-12 {
     border-right: 1px solid $secondary
 }
-.services-all .col.last {
+.services-all .col-12.last {
     border: 0
 }
 
@@ -378,7 +390,7 @@ footer a.social:hover path {
 }
 .navbar-toggler:focus {
     -webkit-box-shadow: 0 0 0 0.25rem;
-    box-shadow: 0 0 0 0.25rem #211ae4;
+    box-shadow: 0 0 0 0.25rem $secondary;
 }
 .navbar-collapse {
     position: fixed;
@@ -404,10 +416,17 @@ footer a.social:hover path {
 .lang {
     border-left: 0
 }
+.sub-bg h2 {
+    color: $white
+}
 .services-all {
     border-bottom: 1px solid $secondary
 }
-.services-all .col {
+.services-all .col-12 {
     border-right: 0
+}
+.check-boxes span {
+    display: block;
+    padding-bottom: 16px;
 }
 }
