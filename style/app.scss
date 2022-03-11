@@ -1,9 +1,9 @@
 
 $primary: #E9E9E9;
-$secondary: #FABDBD;
+$secondary: #211ae4;
 $white: #fff;
 $gray-900: #111;
-$danger: #E52828;
+$danger: #E32811;
 $font-family-sans-serif: 'Syne', sans-serif;
 $btn-border-radius: 0;
 $btn-border-radius-lg: 0;
@@ -28,19 +28,38 @@ $spacers: (
 html,body {
   height: 100%;
 }
-
+body {
+    background: url(../img/maybebaby.jpg) no-repeat fixed center;
+    color: $secondary
+}
 h1 {
     font-size: 54px;
     font-weight: 700;
     text-transform: uppercase
 }
+h3 {
+    font-weight:700;
+    padding-bottom: 16px
+}
 /////////////////////////////////////////
 ////             FORMS               ////
 /////////////////////////////////////////
 
+.form-control::placeholder,
+textarea::placeholder  {
+    color: $secondary;
+    opacity: 1
+}
 input.form-control, textarea {
     border: 0;
-    border-bottom: 1px solid $gray-900
+    border-bottom: 1px solid $secondary;
+    background: transparent;
+    color: $secondary;
+    padding: 0.375rem 0.75rem;
+}
+input.form-control:focus, textarea:focus {
+    background: $secondary;
+    color: #fff;
 }
 
 /////////////////////////////////////////
@@ -49,7 +68,7 @@ input.form-control, textarea {
 
 .link {
     position: relative;
-    border-bottom: 1px solid rgba(0,0,0,0);
+    border-bottom: 1px solid $secondary;
     font-weight: 700;
 }
 a.link:hover,
@@ -69,9 +88,12 @@ a.link.active:before {
 }
 
 .btn-primary {
-    background: $danger;
+    background: transparent;
+    border: 0;
     border-radius: 0;
-    color: $white;
+    color: $danger;
+    font-weight: 600;
+    text-transform: uppercase;
     padding: 16px 24px
 }
 .btn-primary:hover {
@@ -86,18 +108,33 @@ a.link.active:before {
 .btn-primary:hover span img{
     transform: translateX(20px);
 }
-
+.btn-secondary {
+    background: $danger;
+    border: 0;
+    color: $white;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 16px 24px
+}
 /////////////////////////////////////////
 ////       NAV   +  HERO            ////
 /////////////////////////////////////////
 .navbar-light .navbar-nav .nav-link {
     font-size: 16px;
-     color: $gray-900
+    border: 0;
+    color:  $secondary
+}
+.navbar-light .navbar-toggler {
+    border: 1px solid  $secondary;
+    float: right;
+}
+.hero {
+    background: url(../img/blur-bg.png) no-repeat 100%;
 }
 .hero-link {
     font-size: 36px;
     display: block;
-    color: $gray-900;
+    color:  $secondary;
     text-decoration: none;
 }
 .hero-link:hover {
@@ -118,43 +155,50 @@ a.link.active:before {
 .hero-img {
     padding: 72px 64px;
     margin: 64px auto auto -64px;
-    background-color: $gray-900;
     position: relative;
 }
 .hero-img img {
     z-index: 10;
     position: relative;
 }
-.hero-img:before {
-    content: '';
-    position: absolute;
-    bottom: -64px;
-    right: -64px;
-    width: 50%;
-    height: 50%;
-    z-index: 1;
-    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='25' height='25' patternTransform='scale(1) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0,0%,100%,0)'/><path d='M3.25 10h13.5M10 3.25v13.5' transform='translate(2.5,0)' stroke-linecap='square' stroke-width='1' stroke='hsla(0, 0%, 0%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(-20,0)' fill='url(%23a)'/></svg>")
-}
 .lang {
-    border-left: 1px solid $gray-900
-}
-.bg-star {
-    background: url(../img/star-bg.svg) no-repeat center
-}
-.bg-stars {
-    background: url(../img/bg-stars.svg) no-repeat center
+    border-left: 1px solid $secondary
 }
 .eyes-anim .lid {
     opacity: 1;
-     -webkit-transition: all 0.55s ease-in-out;
-    transition: all 0.25s ease-in-out;
-    transition: all 0.25s ease-in-out;
-    transition:  all 0.55s ease-in-out;
+    animation-name: eyes-move;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
 }
-.eyes-anim:hover .lid {
-    opacity: 0;
+@keyframes eyes-move {
+  0%   {opacity: 1}
+  50%  {opacity: 0}
+  100% {opacity: 1}
 }
-
+.eyes-anim .eyes-rolling {
+    animation-name: eyes-roll;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    fill: #211ae4
+}
+@keyframes eyes-roll {
+  0%   {fill: #211ae4;}
+  25%  {fill: #E32811;}
+  75%  {fill: #E32811;}
+  100% {fill: #211ae4;}
+}
+.eyes-anim .eyes-zooming {
+    animation-name: eyes-zoom;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    transform-origin: center;
+}
+@keyframes eyes-zoom {
+  0%   {transform: translate(0, 0);}
+  25%  {transform: translate(-10px, 30px);}
+  75%  {transform: translate(10px, 30px);}
+  100% {transform: translate(0, 0);}
+}
 /////////////////////////////////////////
 /////      CARD-----PORTFOLIO   /////////
 ////////////////////////////////////////
@@ -177,7 +221,7 @@ a.link.active:before {
   filter: grayscale(0%);
 }
 .work-info .row{
-    border-top: 1px solid $gray-900
+    border-top: 1px solid $secondary
 }
 .work-info p{
     margin-bottom: 0
@@ -209,7 +253,7 @@ a.link.active:before {
     right: 10px;
     top: 10px;
     z-index: 10;
-    border: 1px solid #111;
+    border: 1px solid $secondary;
     border-radius: 50%;
     padding: 16px
 }
@@ -219,7 +263,7 @@ a.link.active:before {
 }
 .modal a.btn-next,
 .modal a.btn-prev {
-    color: #111;
+    color: $secondary;
     text-decoration: none;
     padding: 24px 0 0 0;
     position: absolute;
@@ -245,8 +289,11 @@ a.link.active:before {
 /////////////////////////////////////////
 ////            SERVICES PAGE        ////
 /////////////////////////////////////////
+.sub-bg {
+    background: url(../img/blur-bg-sub.png) no-repeat 100%;
+}
 .services-all .col {
-    border-right: 1px solid $gray-900
+    border-right: 1px solid $secondary
 }
 .services-all .col.last {
     border: 0
@@ -254,30 +301,69 @@ a.link.active:before {
 /////////////////////////////////////////
 /////          FOOTER          /////////
 ////////////////////////////////////////
+footer {
+    border-top: 1px solid $secondary;
+    border-bottom: 1px solid $secondary;
+}
+footer h2 {
+    padding-bottom: 24px
+}
 footer ul {
     padding: 0
 }
 footer li {
     list-style: none;
     position: relative;
-    padding-left: 24px;
+    padding: 0 0 8px 24px;
 }
 footer li:before {
     content: '';
     position: absolute;
     width: 16px;
     height: 1px;
-    background-color: $gray-900;
+    background-color: $secondary;
     left: 0;
-    bottom: 50%
+    bottom: 53%
 }
 footer li a {
-    color: $gray-900;
+    color: $secondary;
     text-decoration: none;
 }
+footer li a:hover {
+    color: $danger
+}
 footer a.social:hover rect {
-    stroke: $gray-900
+    stroke: $secondary
 }
 footer a.social:hover path {
-    fill: $gray-900
+    fill: $secondary
+}
+
+
+/////////////////////////////////////////
+/////          RESPONSIVE          /////////
+////////////////////////////////////////
+
+@media (max-width: 992px) {
+.navbar-collapse {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: #ededed;
+    left: 100%;
+    top: 60px;
+    text-align: center;
+    padding-top: 60px;
+    -webkit-transition: all 0.55s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    transition:  all 0.55s ease-in-out;
+}
+.navbar-collapse.show {
+    left: 0
+}
+.lang {
+    border-left: 0
+}
 }
