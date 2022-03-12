@@ -13486,6 +13486,10 @@ footer a.social:hover path {
     border-left: 0;
   }
 
+  .eyes-anim {
+    width: 100%;
+  }
+
   .sub-bg h2, .sub-bg .h2 {
     color: #fff;
   }
