@@ -139,6 +139,7 @@ a.link.active{
 }
 .hero {
     background: url(../img/blur-bg.png) no-repeat 100%;
+    overflow-x: hidden;
 }
 .hero-link {
     font-size: 36px;
