@@ -42,6 +42,9 @@ h3 {
     font-weight:700;
     padding-bottom: 16px
 }
+.section-title {
+    border-bottom: 1px solid $secondary;
+}
 /////////////////////////////////////////
 ////             FORMS               ////
 /////////////////////////////////////////
@@ -411,11 +414,18 @@ footer a.social:hover path {
 .navbar-collapse.show {
     left: 0;
 }
+.navbar-collapse.show .nav-link.active,
+.navbar-collapse.show .nav-link:hover {
+    background-position: center 50px;
+}
 .navbar-collapse.show a {
     padding: 24px
 }
 .lang {
     border-left: 0
+}
+.navbar-collapse.show .lang a {
+    display: block;
 }
 .eyes-anim {
     width: 100%;
