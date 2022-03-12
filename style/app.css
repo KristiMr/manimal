@@ -12921,7 +12921,10 @@ html, body {
 }
 
 body {
-  background: url(../img/maybebaby.jpg) no-repeat fixed center;
+  background-image: url(../img/maybebaby.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-color: #ededed;
   color: #211ae4;
   overflow-x: hidden;
 }
@@ -13266,6 +13269,56 @@ a.link.active {
   100% {
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
+  }
+}
+.eyes-anim .index-eyes {
+  -webkit-animation-name: index-anim;
+          animation-name: index-anim;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes index-anim {
+  20% {
+    -webkit-transform: translate(-10px, -10px);
+            transform: translate(-10px, -10px);
+  }
+  40% {
+    -webkit-transform: translate(5px, -10px);
+            transform: translate(5px, -10px);
+  }
+  60% {
+    -webkit-transform: translate(10px, 20px);
+            transform: translate(10px, 20px);
+  }
+  80% {
+    -webkit-transform: translate(-10px, 20px);
+            transform: translate(-10px, 20px);
+  }
+}
+
+@keyframes index-anim {
+  20% {
+    -webkit-transform: translate(-10px, -10px);
+            transform: translate(-10px, -10px);
+  }
+  40% {
+    -webkit-transform: translate(5px, -10px);
+            transform: translate(5px, -10px);
+  }
+  60% {
+    -webkit-transform: translate(10px, 20px);
+            transform: translate(10px, 20px);
+  }
+  80% {
+    -webkit-transform: translate(-10px, 20px);
+            transform: translate(-10px, 20px);
   }
 }
 .work-img {

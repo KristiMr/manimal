@@ -29,7 +29,10 @@ html,body {
   height: 100%;
 }
 body {
-    background: url(../img/maybebaby.jpg) no-repeat fixed center;
+    background-image: url(../img/maybebaby.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-color: #ededed;
     color: $secondary;
     overflow-x: hidden;
 }
@@ -221,6 +224,19 @@ a.link.active{
   0%   {transform: translate(0, 0);}
   50%  {transform: translate(0, 80px);}
   100% {transform: translate(0, 0);}
+}
+.eyes-anim .index-eyes {
+    animation-name: index-anim;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    transform-origin: center;
+    animation-timing-function: ease-in-out;
+}
+@keyframes index-anim {
+  20%  {transform: translate(-10px, -10px);}
+  40%  {transform: translate(5px, -10px);}
+  60%  {transform: translate(10px, 20px);}
+  80%  {transform: translate(-10px, 20px);}
 }
 /////////////////////////////////////////
 /////      CARD-----PORTFOLIO   /////////
