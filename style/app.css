@@ -13423,10 +13423,6 @@ a.link.active {
   cursor: pointer;
 }
 
-.clients img {
-  max-width: 200px;
-}
-
 .sub-bg {
   background: url(../img/blur-bg-sub.png) no-repeat 100%;
 }
