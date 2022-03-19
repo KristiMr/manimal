@@ -408,6 +408,9 @@ footer a.social:hover path {
 .navbar-light .navbar-toggler-icon {
     background-image: url(../img/burger.svg)
 }
+.sub-page {
+    background: none
+}
 .navbar-toggler:focus {
     -webkit-box-shadow: 0 0 0 0.25rem;
     box-shadow: 0 0 0 0.25rem $secondary;
@@ -452,9 +455,6 @@ footer a.social:hover path {
 }
 .eyes-anim {
     width: 100%;
-}
-.sub-bg h2 {
-    color: $white
 }
 .services-all {
     border-bottom: 1px solid $secondary
