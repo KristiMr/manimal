@@ -13510,6 +13510,10 @@ footer a.social:hover path {
     background-image: url(../img/burger.svg);
   }
 
+  .sub-page {
+    background: none;
+  }
+
   .navbar-toggler:focus {
     -webkit-box-shadow: 0 0 0 0.25rem;
     box-shadow: 0 0 0 0.25rem #211ae4;
@@ -13564,10 +13568,6 @@ footer a.social:hover path {
 
   .eyes-anim {
     width: 100%;
-  }
-
-  .sub-bg h2, .sub-bg .h2 {
-    color: #fff;
   }
 
   .services-all {
