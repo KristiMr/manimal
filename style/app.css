@@ -12981,6 +12981,7 @@ input.form-control, textarea {
 input.form-control:focus, textarea:focus {
   background: #211ae4;
   color: #fff;
+  border-radius: 0;
 }
 
 .link {
@@ -13345,10 +13346,6 @@ a.link.active {
   filter: grayscale(0%);
 }
 
-.work-info .row {
-  border-top: 1px solid #211ae4;
-}
-
 .work-info p {
   margin-bottom: 0;
 }
@@ -13388,7 +13385,7 @@ a.link.active {
 
 .modal .btn-close {
   position: absolute;
-  right: 10px;
+  right: 17px;
   top: 10px;
   z-index: 10;
   border: 1px solid #211ae4;
