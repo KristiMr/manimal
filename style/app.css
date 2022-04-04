@@ -12921,7 +12921,6 @@ html, body {
 }
 
 body {
-  background-image: url(../img/maybebaby.jpg);
   background-attachment: fixed;
   background-position: center;
   background-color: #ededed;
@@ -13376,6 +13375,7 @@ a.link.active {
   transition: all 0.55s ease-in-out;
 }
 
+.work-sample:hover .plus,
 .btn-eye:hover .plus {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
